@@ -67,9 +67,9 @@ function Calculator({ handleValues, error, handleSubmit, values, handleReset}: C
                     </div>
                     {error && <span className='absolute right-0 top-0 text-Red text-sm'>{error[2]}</span>}
                 </label>
-                <label 
-                className='text-Slate-700 text-3xs font-medium flex flex-col gap-2 col-span-2 relative'> Mortage Type
-                    <span className='absolute right-0 top-0 text-Red text-sm'>{error[3]}</span>
+                <div 
+                className=' flex flex-col gap-4 col-span-2 relative'><span className='text-Slate-700 text-3xs font-medium'>Mortage Type</span>
+                    <span className='absolute right-0 top-0 text-Red text-sm font-medium'>{error[3]}</span>
                     <label 
                     className='peer-checked:bg-Lime text-Slate-900 font-bold hover:border-Lime flex border h-10 border-Slate-500  items-center p-3 gap-3 rounded-[0.3rem]'>
                         <input 
@@ -91,7 +91,7 @@ function Calculator({ handleValues, error, handleSubmit, values, handleReset}: C
                         onChange={(e)=>handleChanges(e)}/>
                         Interest Only
                     </label>
-                </label>
+                </div>
                 <button type='submit' className="bg-Lime flex items-center justify-center w-full p-2 gap-2 rounded-4xl xl:col-span-2">
                     <img src="/assets/images/icon-calculator.svg" alt="" />
                     <span className="text-Slate-900 font-bold">Calculate Repayments</span>
