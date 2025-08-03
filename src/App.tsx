@@ -76,6 +76,10 @@ function App() {
     }
     
   }
+  const [clicked,setClicked]=useState(Array(3).fill(false));
+  function handleClicked(newArray:Array<boolean>){
+    setClicked(newArray)
+  }
   function handleReset(){
       handleValues({
           amount:'',
@@ -84,6 +88,8 @@ function App() {
           type:'',
       })
       setSubmitted(false);
+      handleClicked(Array(3).fill(false));
+      setError(Array(4).fill(''));
   }
   return (
     <>
@@ -95,6 +101,9 @@ function App() {
          handleSubmit={handleSubmit}
          values={values}
          handleReset={handleReset}
+         clicked={clicked}
+         handleClicked={handleClicked}
+
         />
         <Results 
         submitted={submitted}
