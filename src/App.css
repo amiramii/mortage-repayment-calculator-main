@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+      cursor: pointer;
+    }
+}
+@theme {
+    --color-Lime:hsl(61, 70%, 52%);
+    --color-Red: hsl(4, 69%, 50%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Slate-100: hsl(202, 86%, 94%);
+    --color-Slate-300: hsl(203, 41%, 72%);
+    --color-Slate-500: hsl(200, 26%, 54%);
+    --color-Slate-700: hsl(200, 24%, 40%);
+    --color-Slate-900: hsl(202, 55%, 16%);
+    --default-font-family:'Plus Jakarta Sans'
+}
